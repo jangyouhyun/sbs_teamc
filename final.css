@@ -1,0 +1,772 @@
+@font-face {
+    font-family: 'KBO-Dia-Gothic';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KBO-Dia-Gothic-light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 2000px;
+    background-image: url('photo/배경_최종.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'KBO-Dia-Gothic', Arial, sans-serif;
+    position: relative;
+    font-weight: 400;
+}
+
+
+.slider {
+    width: 100%; /* 슬라이더의 너비를 설정 */
+    overflow: hidden; /* 슬라이더 밖의 내용은 숨기기 */
+    white-space: nowrap; /* 이미지들이 한 줄로 나열되도록 설정 */
+    position: relative;
+}
+
+.titlephoto {
+    display: inline-block;
+    width: 600px; /* 각 이미지의 너비를 설정 */
+    margin-right : 60px;
+    height: auto;
+    border-radius: 10px;
+    filter: brightness(0.7);
+    animation: continuousSlide 15s linear infinite; /* 30초 동안 슬라이드 애니메이션을 무한 반복 */
+}
+
+@keyframes continuousSlide {
+    0% {
+        transform: translateX(100%); /* 이미지가 슬라이더의 오른쪽 끝에 위치 */
+    }
+    100% {
+        transform: translateX(-100%); /* 이미지가 슬라이더의 왼쪽 끝 밖으로 이동 */
+    }
+}
+
+
+
+.content-container {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom : 150px;
+    font-weight: 700;
+}
+
+
+.title {
+    font-size: 4.5em;
+    margin: 30px 0;
+    color: white;
+}
+
+.subtitle {
+    font-size: 1.5em;
+    color: white;
+}
+
+.badge {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 1em;
+    margin-top: 30px;
+}
+
+.fixed-navi {
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 200px;
+    background-color: #ddd;
+    z-index: 99;
+}
+
+.progress {
+    width: 100%;
+    max-width: 600px;
+    height: 0;
+    background-color: #000;
+    transition: height 0.1s ease;
+}
+
+.image-slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* 아이콘과 이미지 사이 간격 설정 */
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px auto;
+    position : relative;
+}
+
+#c2{
+    display : block;
+    width: 100%; /* 컨테이너 너비 설정 */
+    height: 600px; /* 컨테이너 높이 설정 */
+}
+
+.unique-container {
+    width: 500px; 
+    height: 500px; 
+    background-color: white; 
+    border-radius: 50%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+}
+
+.unique-container img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 50%;
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px; /* 이미지 행 사이의 간격 */
+}
+
+.image-container img {
+    width : 700px;
+    height : auto;
+    border-radius: 10px;
+}
+
+.chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    position : relative;
+    margin-top: 60px;
+}
+
+.chart-box {
+    flex: 0 0 400px; 
+    text-align: center;
+}
+
+.caption{
+    max-width: 700px;
+    color : #ddd;
+    text-align: center;
+    font-size : 1.0em;
+    margin : 40px auto;
+}
+
+.message{
+    position : absolute;
+    top : -30px;
+    left : 380px;
+    color : white;
+    font-weight : 400;
+    font-size : 1.0em;
+}
+
+.message2{
+    position : absolute;
+    top : -40px;
+    left : 200px;
+    color : white;
+    font-weight : 400;
+    font-size : 1.0em;
+}
+
+
+#img_1_1 {
+    position: absolute;
+    top: 0;
+    left: 300px;
+    width: 450px;
+}
+
+#img_1_2 {
+    position: absolute;
+    top: 160px; /* 컨테이너 상단에서 100px 아래 */
+    left: 780px; /* 컨테이너 왼쪽에서 350px 오른쪽 */
+    width: 420px;
+}
+
+#img_1_3 {
+    position: absolute;
+    top: 370px; /* 컨테이너 상단에서 200px 아래 */
+    left: 420px; /* 컨테이너 왼쪽에서 100px 오른쪽 */
+    width: 300px;
+}
+
+.icon-container {
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+
+#img_2_1 {
+    display: block;
+    width: 700px;
+    height: auto;
+    margin: 0 auto;
+}
+
+#img_2_2 {
+    display: none;
+    width: 300px;
+    height: auto;
+    position : absolute;
+    top : 20px;
+    left : 300px;
+}
+
+#img_2_3 {
+    display: none;
+    width: 300px;
+    height: auto;
+    position : absolute;
+    top : 120px;
+    left : 640px; 
+}
+
+#img_2_4 {
+    display: none;
+    width: 300px;
+    height: auto;
+    position : absolute;
+    top : 120px;
+    left : 840px; 
+}
+
+#img_4_1, #img_4_2, #img_5_1 {
+    width: 340px; /* 첫 번째와 두 번째 이미지의 동일한 크기 */
+    height: auto;
+    margin-right: 20px; /* 첫 번째 이미지와 두 번째 이미지 사이의 간격 */
+}
+
+#img_4_2, #img_5_2{
+    width: 340px;
+    margin-right: 0; /* 마지막 이미지에 간격을 없애기 위해 */
+}
+
+#img_4_3 {
+    width: 700px;
+    
+    height: auto;
+}
+
+.button-container {
+    text-align: center;
+    position: relative;
+    
+}
+
+.button-container button {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid white; /* 경계를 희미하게 설정 */
+    box-shadow: 0 0 15px white;
+    cursor: pointer;
+    animation: blink 1s infinite; /* 깜빡거리기 효과 */
+    outline: none; /* 버튼 클릭 시 생기는 기본 테두리 제거 */
+    margin: 0 10px;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+#bt1{
+    position : absolute;
+    top : -300px;
+    left : -20px;
+}
+
+#bt2{
+    position : absolute;
+    top : -100px;
+    left : 50px;
+}
+
+#bt3{
+    position : absolute;
+    top : -150px;
+    left : 280px;
+}
+
+.text-container {
+    max-width: 700px;
+    margin: 80px auto;
+    padding: 20px;
+    color: white;
+    line-height: 1.6em;
+    text-align: justify;
+}
+
+.chapter-number {
+    margin-top: 200px;
+    font-size: 3em;
+    margin-bottom: 50px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.chapter-title {
+    font-size: 2.2em;
+    margin-bottom: 60px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.lead {
+    font-size: 1.8em;
+    text-align: center;
+    font-weight : 500;
+    margin : 0 auto;
+}
+
+.article {
+    line-height: 1.6em;
+    font-size: 1.2em;
+}
+
+.mark {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 20px;
+    line-height: 2.0em;
+    color: white;
+    font-size: 1.4em;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px); /* 아래에서 위로 올라오면서 나타나도록 */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.mark.visible {
+    opacity: 1;
+    transform: translateY(0); /* 원래 위치로 이동 */
+}
+
+.mark img {
+    width: 30px;
+    height: 30px;
+    margin: 50px auto;
+    display: block;
+}
+
+
+.contact-container {
+    margin-top: 200px;
+    margin-bottom: 80px;
+    text-align: center;
+    font-size: 1.0em;
+    line-height: 2em;
+    color: white;
+    font-weight: 400;
+}
+
+.contact-container h2 {
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.contact-info {
+    margin-bottom: 30px;
+}
+
+.logo-container {
+    margin: 0 auto;
+    padding: 0;
+    color: white;
+    width: 160px; /* 이미지 크기 + 흰색 여백 */
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+
+}
+
+.logo-container img {
+    width: 100%; /* 이미지가 container에 맞게 조정 */
+    height: auto; /* 이미지 비율 유지 */
+    border-radius: 10px;
+    padding: 30px; /* 흰색 여백을 만들기 위해 padding 추가 */
+    background-color: white; /* 흰색 배경 */
+}
+
+
+.logo-row {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 200px;
+}
+
+.logo-row::after {
+    content: "";
+    display: block;
+    height: 200px; /* 원하는 공백 크기 설정 */
+}
+
+.data-container {
+    align-items: center;
+    position: relative;
+    margin: 10px;
+    display: flex;
+    gap: 30px; 
+}
+
+.exit img {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+
+
+#map {
+    width: 500px;
+    height: 600px;
+    border-radius: 10px;
+}
+
+.map-button-container {
+    margin: 10px 0;
+    text-align: center;
+    position : relative;
+    top : 10px;
+    left : -130px;
+}
+.map-button-container button {
+    margin: 5px;
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    color : white;
+    border : 1px solid white;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+#mapbtn1{
+    background-color : #c71e1d;
+}
+#mapbtn2{
+    background-color : black;
+}
+
+/* 클릭 시 애니메이션 효과 */
+.map-button-container button:active {
+    transform: scale(0.95); /* 버튼을 클릭 시 약간 작아지도록 */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* 클릭 시 그림자 효과 */
+}
+
+.circle-icon {
+    background-color: #c71e1d;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 0.7;
+}
+
+.circle-icon2 {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 0.7;
+}
+
+.tree {
+    position: relative;
+    width: 100%;
+    height: 1700px; /* 트리의 전체 높이 설정 */
+    background-color: rgba(255, 255, 255, 0.7); 
+    margin : 20px auto;
+    padding : 40px;
+    
+}
+
+.icon {
+    position: absolute;
+    width: 400px; /* 전체 아이콘의 너비 */
+    height: 150px; /* 전체 아이콘의 높이 */
+}
+
+#line1, #line2, #line3, #line4 {
+    position: absolute;
+    background-color: #000; /* 선의 색상 */
+}
+
+#line1 {
+    top: 100px; /* 세로선의 시작 위치 */
+    left: 0;
+    height: 100px; /* 세로선 높이 */
+    width: 2px; /* 세로선 두께 */
+}
+
+#line2 {
+    top: 100px;
+    left: 0;
+    width: 100%; /* 가로선 길이 유지 */
+    height: 2px; /* 가로선 두께 */
+}
+
+#line4 {
+    top: 100px;
+    right : 0; /* line2의 75% 위치에 배치 */
+    transform: translateX(-50%); /* 정확히 해당 위치에 배치하기 위해 X축 변환 */
+    height: 100px; /* 세로선 높이 */
+    width: 2px; /* 세로선 두께 */
+}
+
+#icon1 {
+    top: 230px;
+    left: 350px;
+    width: 700px;
+}
+
+#one {
+    position: absolute;
+    top: 130px;
+    left: 730px;
+}
+
+#three {
+    position: absolute;
+    top: 660px;
+    left: 350px;
+}
+
+#four {
+    position: absolute;
+    top: 1070px;
+    left: 350px;
+}
+
+#five {
+    position: absolute;
+    top: 580px;
+    left: 1040px;
+}
+
+#icon2 {
+    position: absolute;
+    top: 560px;
+    left: 800px;
+}
+
+#seven {
+    position: absolute;
+    top: 960px;
+    left: 790px;
+}
+
+#eight {
+    position: absolute;
+    top: 1400px;
+    left: 790px;
+}
+
+#nine {
+    position: absolute;
+    top: 940px;
+    left: 1200px;
+}
+
+
+.iframe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 200px; 
+    height: 200px;
+}
+
+.iframe-container iframe {
+    position: absolute; /* 모든 iframe을 절대 위치로 설정 */
+    top: 50%;  /* 세로 중앙 정렬 */
+    left: 50%; /* 가로 중앙 정렬 */
+    transform: translate(-50%, -50%); /* 중앙 정렬을 위한 변환 */
+    width: 100%; /* 필요에 따라 조정 */
+    height: 100%; /* 필요에 따라 조정 */
+}
+
+#h2-1{
+    position: relative;
+    left: -60px; /* 기존 값 -60px에서 50px 증가 */
+    top: -300px;
+}
+
+#h2-2{
+    position: relative;
+    left: -90px; /* 기존 값 -90px에서 50px 증가 */
+    top: -220px;
+}
+
+.iframe-container h3{
+    position: relative;
+    left: -100px; /* 기존 값 -120px에서 50px 증가 */
+    top: 120px;
+}
+
+
+
+/* #one에 대한 설정 */
+#first-1, #first-2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s ease-in-out; /* 서서히 변화하는 효과 */
+}
+
+#first-2 {
+    width: 0; 
+    min-width: 200px; 
+    height: 100px;
+    opacity: 0; /* 처음에 칼럼차트를 숨깁니다 */
+}
+
+
+/* #three에 대한 설정 */
+#third-1-1, #third-1-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%; /* 아이프레임이 80% 크기로 설정된 경우 */
+    height: 80%;
+    transition: opacity 1s ease-in-out;
+}
+
+#third-1-2 {
+    width: 0; 
+    min-width: 200px; 
+    height:100px;
+    opacity: 0;
+}
+
+/* #four에 대한 설정 */
+#third-2-1, #third-2-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%; /* 아이프레임이 80% 크기로 설정된 경우 */
+    height: 80%;
+    transition: opacity 1s ease-in-out;
+}
+
+#third-2-2 {
+    width: 0; 
+    min-width: 200px; 
+    height:100px;
+    opacity: 0;
+}
+
+/* #five에 대한 설정 */
+#second-2-1, #second-2-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%; /* 아이프레임이 60% 크기로 설정된 경우 */
+    height: 80%;
+    transition: opacity 1s ease-in-out;
+}
+
+#second-2-2 {
+    width: 0; 
+    min-width: 200px; 
+    height:100px;
+    opacity: 0;
+}
+
+/* #seven에 대한 설정 */
+#fourth-1-1, #fourth-1-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%; /* 아이프레임이 50% 크기로 설정된 경우 */
+    height: 60%;
+    transition: opacity 1s ease-in-out;
+}
+
+#fourth-1-2 {
+    width: 0; 
+    min-width: 200px; 
+    height:100px;
+    opacity: 0;
+}
+
+/* #eight에 대한 설정 */
+#fourth-2-1, #fourth-2-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%; /* 아이프레임이 50% 크기로 설정된 경우 */
+    height: 60%;
+    transition: opacity 1s ease-in-out;
+}
+
+#fourth-2-2 {
+    width: 0; 
+    min-width: 200px; 
+    height:100px;
+    opacity: 0;
+    height : 100px;
+}
+
+/* #nine에 대한 설정 */
+#third-4-1, #third-4-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%; /* 아이프레임이 30% 크기로 설정된 경우 */
+    height: 60%;
+    transition: opacity 1s ease-in-out;
+}
+
+#third-4-2 {
+    width: 0; 
+    min-width: 200px; 
+    height:100px;
+    opacity: 0;
+}
+
+.tree-title{
+    font-size : 2.5em;
+    position : absolute;
+    top : 20;
+    left: 20;
+    font-weight: 800;
+    opacity : 0.7;
+}
+
+
